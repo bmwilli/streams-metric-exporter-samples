@@ -34,7 +34,7 @@ composite HeadsTails {
     }
 
     (stream <FlipStream> HeadsTuples;
-     stream <FlipStream> TailsTuples) = Filter(FlipStream) {
+     stream <FlipStream> TailsTuples) as ResultSeparator = Filter(FlipStream) {
       param filter : result == "Heads";
     }
 
