@@ -18,11 +18,9 @@ composite HeadsTails {
           if (result == lastFlip) {
             sameCount++;
             if ((result == "Heads") && (sameCount > maxHeads)) {
-              println("Should set maxHeads = sameCount: " + (rstring)sameCount);
               maxHeads = sameCount;
               setCustomMetricValue("maxConsecutiveHeads",maxHeads);
             } else if ((result == "Tails") && (sameCount > maxTails)) {
-              println("Should set maxTails = sameCount: " + (rstring)sameCount);
               maxTails = sameCount;
               setCustomMetricValue("maxConsecutiveTails",maxTails);
             }
